@@ -35,7 +35,19 @@ let project: {
 };
 // Union type
 let 회원2: number | string = 123;
-let 오브젝트 : {a: string | number}={a:'123'}
+let 오브젝트: { a: string | number } = { a: "123" };
 
 // 모든 할당에 에러가 안남
-let 이름2 : any;
+let 이름2: any;
+
+let 학교: {
+  score: (number | boolean)[];
+  teacher: string;
+  friend: string | string[];
+} = {
+  score: [100, 97, 84],
+  teacher: "Phil",
+  friend: "John",
+};
+학교.score[4] = false;
+학교.friend = ["Lee", 학교.teacher];
